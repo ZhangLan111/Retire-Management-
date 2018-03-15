@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工资档案</title>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <!-- Data Tables -->
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        #div1>a{
+            display:inline-block;
+            padding: 4px 10px;
+            border:1px solid rgb(221,211,211);
+        }
+        #De_box{
+            opacity:0;
+            margin:2em;
+            position:fixed;
+            top:0;
+            left:0;
+            background:#ccc;
+            z-index:999;
+            box-shadow:3px 3px 3px #ccc;
+            border:1px solid #ccc;
+            border-radius:1em;
+            display:none;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition:all 1s;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" style="margin-top:3em;text-align:center;border:1px solid #e7eaec"><h1>工资档案</h1></div>
+
+        <div class="col-sm-3" id="De_box">
+            <form class="form-horizontal m-t">
+                <div class="col-sm-12" style="margin-bottom:1em;text-align:right;">
+                    <a href="javascript:close();" style="color:red;font-size:1em"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">姓名：</label>
+                    <div class="col-sm-7">
+                        <input id="cname" name="text"  class="form-control MyInput" aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">年龄：</label>
+                    <div class="col-sm-7">
+                        <input id="cemail" type="text" class="form-control  MyInput" name="text" required="" aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">工龄：</label>
+                    <div class="col-sm-7">
+                        <input id="curl" type="text" class="form-control  MyInput" name="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">工资：</label>
+                    <div class="col-sm-7">
+                        <input  type="text" class="form-control  MyInput" name="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">职位：</label>
+                    <div class="col-sm-7">
+                        <input  type="text" class="form-control  MyInput" name="text">
+                    </div>
+                </div>
+            </form>
+
+            <div class="col-sm-4 col-sm-offset-4" style="margin-bottom:2em;margin-top:1em">
+                <button class="btn btn-primary" id="Add_Button">提交</button>
+            </div>
+
+        </div>
+        <div class=" col-sm-8 col-sm-offset-2" style="font-size:1.2em;border:1px solid #e7eaec">
+                <span>
+                    <a style="display:inline-block;margin-left:0.5em;padding:1em 0.5em;" id="Add">
+                        <i class="fa fa-plus-square"></i>
+                        新增</a>
+                </span>
+
+            <span>
+                    <a style="display:inline-block;margin-left:0.5em;padding:1em 0.5em;" id="Delete">
+                        <i class="fa fa-trash"></i>
+                        删除</a>
+                </span>
+        </div>
+        <div class="ibox-content col-sm-8 col-sm-offset-2" data-example-id="hoverable-table">
+            <table id="table" class="table table-bordered" border="1" width="50%">
+                <thead>
+                <tr>
+                    <th scope="row">序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>工龄</th>
+                    <th>工资</th>
+                    <th>职位</th>
+                    <th>编辑</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="staff">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" style="position:relative;height:2em">
+            <div id="div1" style="position:absolute;left:0;margin:2em 0;"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 全局js -->
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+<script src="js/custom_js/index_Page_fn.js"></script>
+<script src="js/custom_js/SalaryFile.js"></script>
+<script src="js/custom_js/editAndDelete_fn.js"></script>
+</body>
+</html>

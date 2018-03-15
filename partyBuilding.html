@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>党建工作</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+        .clearfloat{zoom:1}
+        /*整体布局 Header Body Footer*/
+        body{
+            margin:0;
+            padding:0;
+            background: white url(img/background.png);
+            background-repeat:no-repeat ;
+        }
+        ul{
+            padding:0;
+            margin:0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color:#666666;
+        }
+        #Header{
+            width:100%;
+        }
+        #Body{
+            width:1235px;
+            margin:0 auto;
+            border:1px  solid #CDCDCD;
+            box-shadow:0 3px 10px 1px #CDCDCD;
+            background:#F3F3F4;
+        }
+        #Footer{
+           background: #dae1e9;
+            padding:20px;
+            margin-top:20px;
+        }
+        /*下拉菜单*/
+        .nav{
+            background:#27c2ee;
+        }
+        .nav nav{
+            width:1235px;
+            margin:0 auto;
+            position:relative;
+        }
+        .nav a{
+            color:white;
+            text-decoration: none;
+        }
+        .nav nav .ClassA{
+            display:inline-block;
+            position:relative;
+            float:left;
+            width:150px;
+            height:40px;
+        }
+        .nav nav .ClassA:hover{
+            background:#14A2CA;
+        }
+        .nav nav .ClassA:hover ul{
+            opacity:1;
+            left:0;
+        }
+        .nav nav .ClassA a{
+            display:inline-block;
+            width:100%;
+            height:100%;
+            text-align:center;
+            line-height:40px;
+            background:transparent;
+
+        }
+        .nav nav .ClassA ul{
+            /*隐藏二级菜单*/
+            width:150px;
+            height:40px;
+            position:absolute;
+            left:-20px;
+            z-index:3;
+            opacity:0;
+            transition: all  1s;
+        }
+        .nav nav .ClassA ul a{
+            background:#1CADD5;
+            padding:3px;
+            border-bottom:1px solid white;
+        }
+        .nav nav .ClassA ul a:hover{
+            background:#14A2CA;
+            padding:3px;
+            border-bottom:1px solid white;
+        }
+        .nav nav ul{
+            list-style:none;
+            padding:0;
+        }
+
+        /*中间文章预览内容*/
+        #Body .body-left{
+            width:25%;
+            float:left;
+        }
+        #Body .body-left ul{
+            margin:10px;
+            border:1px solid #e2e3e3;
+        }
+        #Body .body-left ul li{
+            margin:20px 30px;
+            padding:10px;
+            border-bottom:1px solid #e2e3e3;
+        }
+        #Body .body-left ul li:hover{
+            background:#BFBFC0;
+        }
+        #Body .body-right{
+            width:70%;
+            float:left;
+            margin:10px 30px;
+            padding:30px;
+            border:1px solid #e2e3e3;
+        }
+        #Body .body-right #article{
+
+            border-bottom:1px solid #e2e3e3;
+        }
+        #div1>a {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid rgb(221,211,211);
+        }
+    </style>
+</head>
+<body>
+    <div id="Header">
+        <div class="clearfloat" style="width:1235px;margin:0 auto;">
+            <div  style="float:left;margin:30px;width:920px">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div  style="float:right;margin:30px">
+                <button><a href="login.html">登录</a></button>
+            </div>
+        </div>
+
+        <div class="nav clearfloat">
+            <nav>
+                <ul>
+                    <li class="ClassA"><a href="user-index.html">首页</a></li>
+                    <li class="ClassA"><a href="javascript:;">组织结构</a>
+                        <!--部门简介|离退休工作党委|关工委|党支部|离退休工作处|老教授协会|高教老协老体协|片区小组-->
+                        <ul> 
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="11">关工委</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="12">党支部</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="13">片区小组</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="14">老教授协会</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="15">离退休工作处</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="16">高教老协老体协</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="17">离退休工作党委</a></li>
+                            <li><a href="organizationStructure.html" onclick='getValue(this)' value="18">部门简介</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="ClassA"><a href="javascript:;">政策文件</a>
+                        <!--国家政策|市级政策|学校政策|处内规定|重要讲话-->
+                        <ul>
+                            <li><a href="policyFile.html" onclick='getValue(this)' value="21">国家政策</a></li>
+                            <li><a href="policyFile.html" onclick='getValue(this)' value="22">市级政策</a></li>
+                            <li><a href="policyFile.html" onclick='getValue(this)' value="23">学校政策</a></li>
+                            <li><a href="policyFile.html" onclick='getValue(this)' value="24">处内规定</a></li>
+                            <li><a href="policyFile.html" onclick='getValue(this)' value="25">重要讲话</a></li></ul>
+
+                    </li>
+
+                    <li class="ClassA"><a href="javascript:;">党建工作</a>
+                        <!--专项工作|行政动态|协会工作|小组工作|人员信息-->
+                        <ul>
+                            <li><a href="partyBuilding.html" onclick='getValue(this)' value="31">专项工作</a></li>
+                            <li><a href="partyBuilding.html" onclick='getValue(this)' value="32">行政动态</a></li>
+                            <li><a href="partyBuilding.html" onclick='getValue(this)' value="33">协会工作</a></li>
+                            <li><a href="partyBuilding.html" onclick='getValue(this)' value="34">小组工作</a></li>
+                            <li><a href="partyBuilding.html" onclick='getValue(this)' value="35">人员信息</a></li></ul>
+
+                    </li>
+
+                    <li class="ClassA"><a href="javascript:;">行政管理</a>
+                        <!--专项工作|党建工作|关工委工作|教授协会工作|高教老协工作|老体协工作|党员园地|党员信息-->
+                        <ul>
+                            <li><a href="administration.html" onclick='getValue(this)' value="41">专项工作</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="42">党建工作</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="43">党员园地</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="44">党员信息</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="45">关工委工作</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="46">老体协工作</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="47">教授协会工作</a></li>
+                            <li><a href="administration.html" onclick='getValue(this)' value="48">高教老协工作</a></li></ul>
+                    </li>
+
+                    <li class="ClassA"><a href="javascript:;">特色服务</a>
+                        <!--特殊帮扶|法律咨询站点|心理咨询站点|志愿服务队-->
+                        <ul>
+                            <li><a href="specialService.html" onclick='getValue(this)' value="51">特殊帮扶</a></li>
+                            <li><a href="specialService.html" onclick='getValue(this)' value="52">志愿服务队</a></li>
+                            <li><a href="specialService.html" onclick='getValue(this)' value="53">法律咨询站点</a></li>
+                            <li><a href="specialService.html" onclick='getValue(this)' value="54">心理咨询站点</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="ClassA"><a href="javascript:;">老年园地</a>
+                        <!--焕发风采|养生保健|作品展示-->
+                        <ul>
+                            <li><a href="oldPlay.html" onclick='getValue(this)' value="61">焕发风采</a></li>
+                            <li><a href="oldPlay.html" onclick='getValue(this)' value="62">养生保健</a></li>
+                            <li><a href="oldPlay.html" onclick='getValue(this)' value="63">作品展示</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="Body" class="clearfloat">
+
+            <div style="margin-bottom:20px"><img src="img/cqupt.jpg" alt="" style="width:100%"></div>
+
+            <!--左边-->
+            <div class="body-left">
+
+                <ul>
+                    <li><span style="font-size:25px">行政管理</span></li>
+                    <li><a href="#" value="31" id="c1" onclick="getvalue(this)">专项工作</a></li>
+                    <li><a href="#" value="32" id="c2" onclick="getvalue(this)">行政动态</a></li>
+                    <li><a href="#" value="33" id="c3" onclick="getvalue(this)">协会工作</a></li>
+                    <li><a href="#" value="34" id="c4" onclick="getvalue(this)">小组工作</a></li>
+                    <li><a href="#" value="35" id="c5" onclick="getvalue(this)">人员信息</a></li>
+                </ul>
+            </div>
+            <!-- 右边 -->
+            <div class="body-right">
+                <div style="margin-bottom:20px;border-bottom:2px solid #e2e3e3;">
+                    <span style="font-size:30px;display: inline-block;" id="rightTitle">专项工作</span>
+                </div>
+                <div style="padding:20px;">
+                        <table class="table table-hover" style="background:white;border:1px solid #e2e3e3">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>题目</th>
+                                <th>作者</th>
+                                <th>上传时间</th>
+                            </tr>
+                            </thead>
+                            <tbody id="otable">
+                           
+                            </tbody>
+                        </table>
+                </div>
+                <!-- 分页 -->
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2" style="position:relative;height:2em">
+                         <div id="div1" style="position:absolute;width: auto;">
+                
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+    </div>
+
+
+
+    <div id="Footer">
+        <p style="text-align:center">重庆邮电大学离退休办事处  渝中区办事处</p>
+        <p style="text-align:center">&copy 香樟林工作室</p>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/custom_js/page.js"></script>
+    <script type="text/javascript" src="js/custom_js/publicNav.js"></script>
+     <script type="text/javascript">
+         var lastValueA,navTitle;
+        var rightTitle = document.getElementById('rightTitle');
+        var c1 = document.getElementById('c1');
+        var c2 = document.getElementById('c2');
+        var c3 = document.getElementById('c3');
+        var c4 = document.getElementById('c4');
+        var c5 = document.getElementById('c5');
+        var title,num,author,uploadTime,all,number,oa,Url;
+        num = 0;
+
+        /*获取右边title*/
+        var sessionTitle = sessionStorage.getItem('navTitle');
+        rightTitle.innerHTML = sessionTitle;
+        /*获取二级菜单value值*/
+        var n = sessionStorage.getItem('lastValueA');
+        console.log('获取二级菜单value值:'+n);
+        if (n == 31) {
+               c1.parentNode.style.background = '#BFBFC0';
+            }
+            else if(n == 32){
+                c2.parentNode.style.background = '#BFBFC0';
+            }
+            else if(n == 33){
+               c3.parentNode.style.background = '#BFBFC0';
+            }
+            else if(n == 34){
+               c4.parentNode.style.background = '#BFBFC0';
+            }
+            else if(n == 35){
+                c5.parentNode.style.background = '#BFBFC0';
+            }
+            else{
+                console.log('路径错了')
+            }
+
+           function getValue(e){
+                navTitle = e.innerHTML;
+                lastValueA = e.getAttribute('value');
+                sessionStorage.setItem('lastValueA',lastValueA);
+                sessionStorage.setItem('navTitle',navTitle);
+            };
+
+             function getvalue(e){
+                var child = e.parentNode.parentNode.childNodes;
+                for(i = 0; i < child.length; i++){
+                    if (child[i].nodeType === 1) {
+                        child[i].style.background = '#fff';
+                    }
+                }
+            oa = e.getAttribute('value');
+            console.log('点击函数后value:'+oa);
+            e.parentNode.style.background = "#BFBFC0";
+            console.log('rightTitle:'+rightTitle.innerHTML);
+            rightTitle.innerHTML = e.innerHTML;
+            if(oa == 31){
+                Url = "http://119.29.53.178:8080/retirement/partyBuildWork/selectPartyBuildWorksByA.action";
+            }
+            else if(oa == 32){
+                Url = "http://119.29.53.178:8080/retirement/partyBuildWork/selectPartyBuildWorksByB.action";
+            }
+            else if(oa == 33){
+                Url = "http://119.29.53.178:8080/retirement/partyBuildWork/selectPartyBuildWorksByC.action";
+            }
+            else if(oa == 34){
+                Url = "http://119.29.53.178:8080/retirement/partyBuildWork/selectPartyBuildWorksByD.action";
+            }
+            else if(oa == 35){
+                Url = "http://119.29.53.178:8080/retirement/partyBuildWork/selectPartyBuildWorksByE.action";
+            }
+            else{
+                console.log('没有这个路径');
+            }
+            console.log(Url);
+            $.ajax({
+                type:"GET",
+                /*url:"js/data/userData.json",*/
+                url:Url+"?"+"pageNum"+"="+1,
+                dataType:"json",
+                contentType:"aplication/json;charset=utf-8",
+                success:function(data){
+                    console.log(data);
+                    for(var i=0;i<4;i++){
+                        num++;
+                        all=document.createElement('tr');
+                        //题目
+                        title=document.createElement('td');
+                        //序号
+                        number=document.createElement('th');
+                        //作者
+                        author=document.createElement('td');
+                        //时间
+                        Author=document.createElement('td');
+                        oa=document.createElement('a'); 
+                        uploadTime = document.createElement('td');
+                        
+                        all.appendChild(number);
+                        all.appendChild(title);
+                        all.appendChild(author);
+                        all.appendChild(uploadTime);
+                        title.appendChild(oa);
+                        number.innerHTML= num;
+                        number.scopeName = 'row';
+                        oa.href = 'showArticle.html';
+                        otable.appendChild(all);
+                        oa.innerHTML=data.list[i].Title;
+                        author.innerHTML=data.list[i].publishAuthor;
+                        uploadTime.innerHTML=data.list[i].publishTime;
+                    }
+                },
+                error:function(E_request){
+                    alert("发生错误："+E_request.status);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

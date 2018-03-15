@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>信息统计</title>
+  
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        #div1>a{
+            display:inline-block;
+            padding: 4px 10px;
+            border:1px solid rgb(221,211,211);
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+        <div class="row  border-bottom dashboard-header text-center">
+                   <div class="col-sm-4">
+                         <h2>人员总数</h2>
+                         <p><a href="">33</a></p>
+                   </div>
+                   <div class="col-sm-4">
+                         <h2>文章总数</h2>
+                         <p><a href="">52</a></p>                       
+                   </div>
+                   <div class="col-sm-4">
+                        <h2>档案总数</h2>   
+                        <p><a href="">96</a></p>   
+                   </div>              
+        </div>
+            <div class="row">
+                        <div class="ibox-content col-sm-8 col-sm-offset-2" data-example-id="hoverable-table" style="margin-top:3em">
+                            <table id="table" class="table table-bordered" border="1" width="50%">
+                                <caption>作品审核</caption>
+                                <thead>
+                                <tr>
+                                    <th scope="row">#</th>
+                                    <th>作品</th>
+                                    <th>通过情况</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+
+                                <tbody id="staff">
+
+                                </tbody>
+                            </table>
+                        </div>
+              </div>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2" style="position:relative;height:2em">
+                    <div id="div1" style="position:absolute;left:0;margin:2em 0;"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- 全局js -->
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+<script src="js/custom_js/index_main.js"></script>
+<script src="js/custom_js/index_Page_fn.js"></script>
+</body>
+</html>

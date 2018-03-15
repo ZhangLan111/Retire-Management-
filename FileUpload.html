@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传文件</title>
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/wangEditor-CSS/css/wangEditor.min.css">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h2>管理员文件上传</h2>
+                        <button id="edit" class="btn btn-primary btn-xs m-l-sm" type="button" style="margin-left:0">编辑</button>
+                        <button id="preview" class="btn btn-primary  btn-xs" type="button">预览</button>
+                        <button id="save" class="btn btn-primary  btn-xs" type="button">点击上传</button>
+                        <label style="margin-left:10em;">上传作品</label>
+
+                    <label style="">
+                        <select id="selProvince" onChange = "getCity(this.options[this.selectedIndex].value)">
+                            <option value="1请选择">-请选择-</option>
+                            <option value="1新闻动态">新闻动态</option>
+                            <option value="2通知公告">通知公告</option>
+                            <option value="3组织结构">组织结构</option>
+                            <option value="4政策文件">政策文件</option>
+                            <option value="5党建工作">党建工作</option>
+                            <option value="6行政管理">行政管理</option>
+                            <option value="7特色服务">特色服务</option>
+                            <option value="8老年园地">老年园地</option>
+                        </select>
+                    </label>
+                    <label style="">
+                        <select id="selCity">
+                            <option>-请选择-</option>
+                        </select>
+                    </label>
+                        <label style="margin-left:10em;">上传附件：</label>
+                        <label>
+                            <input type="file" id="file_upload" name="wangEditorH5File">
+                        </label>
+                </div>
+                <div class="ibox-content" id="eg">
+                    <div class="click2edit wrapper" id="div1" style="height:700px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 全局js -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/wangEditor-js/wangEditor.min.js"></script>
+
+
+<script src="js/custom_js/fileUpload.js"></script>
+
+
+</body>
+</html>

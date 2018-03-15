@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章管理</title>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <!-- Data Tables -->
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        #div1>a{
+            display:inline-block;
+            padding: 4px 10px;
+            border:1px solid rgb(221,211,211);
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class=" col-sm-8 col-sm-offset-2" style="margin-top:3em;text-align:center;border:1px solid #e7eaec"><h1>文章管理</h1></div>
+        <div class=" col-sm-8 col-sm-offset-2" style="font-size:1.2em;border:1px solid #e7eaec">
+                <span>
+                    <a style="display:inline-block;margin-left:0.5em;padding:1em 0.5em;" id="Add">
+                        <i class="fa fa-plus-square"></i>
+                        新增</a>
+                </span>
+            <span>
+                    <a style="display:inline-block;margin-left:0.5em;padding:1em 0.5em;" id="Delete">
+                        <i class="fa fa-trash"></i>
+                        删除</a>
+                </span>
+            <label style="display:inline-block;float:right;margin:1em 0.5em;"><select id="mySelect" >
+                <option value="1">新闻动态</option>
+                <option value="2">通知公告</option>
+                <option value="3">组织结构</option>
+                <option value="4">政策文件</option>
+                <option value="5">党建工作</option>
+                <option value="6">行政管理</option>
+                <option value="7">特色服务</option>
+                <option value="8">老年园地</option>
+            </select></label>
+        </div>
+        <div class="ibox-content col-sm-8 col-sm-offset-2" data-example-id="hoverable-table">
+            <table id="table" class="table table-bordered" border="1" width="50%">
+                <thead>
+                <tr>
+                    <th scope="row">#</th>
+                    <th>序号</th>
+                    <th>题目</th>
+                    <th>作者</th>
+                    <th>最后一次修改时间</th>
+                    <th>修改者</th>
+                </tr>
+                </thead>
+                <tbody id="staff">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" style="position:relative;height:2em">
+            <div id="div1" style="position:absolute;left:0;margin:2em 0;"></div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- 全局js -->
+        <script src="js/jquery.min.js?v=2.1.4"></script>
+        <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+        <script src="js/custom_js/index_Page_fn.js"></script>
+        <script src="js/custom_js/article_main.js"></script>
+
+</body>
+</html>

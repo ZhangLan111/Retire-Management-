@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" contet="webkit">  <!--360使用各内核-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>消息提醒</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+	<style>
+        #div1>a{
+            display:inline-block;
+            padding: 4px 10px;
+            border:1px solid rgb(221,211,211);
+        }
+        #col-center-block {  
+            float: none;  
+            display: block;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+        a{
+            cursor: pointer;
+        }
+        .gray-bg {
+            background-color: #f3f3f4;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <!-- <div class="container"> -->
+    <div class="col-sm-9 animated fadeInRight" id="col-center-block">
+                <div class="mail-box-header">
+
+                    <form method="get" action="index.html" class="pull-right mail-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" name="search" placeholder="搜索邮件标题，正文等">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-sm btn-primary">
+                                    搜索
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <h2>
+                    收件箱 (16)
+                </h2>
+                    <div class="mail-tools tooltip-demo m-t-md">
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-white btn-sm" id="left"><i class="fa fa-arrow-left"></i>
+                            </button>
+                            <button class="btn btn-white btn-sm" id="right"><i class="fa fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" id="delete">删除</button>
+                    </div>
+                </div>
+                <div class="mail-box">
+
+                    <table class="table table-hover table-mail" id="staff">
+                        <tr class="unread">
+                            <th>选择</th>
+                            <th>消息类型</th>
+                            <th class="mail-subject">消息内容</th>
+                            <th class=""><i class="fa fa-paperclip"></i></th>
+                            <th class="text-right mail-date">时间</th>
+                        </tr>
+                        <tbody id="nBody">   
+                            <tr class="unread" id="content">
+                                <td class="check-mail">
+                                    <input type="checkbox" class="i-checks">
+                                </td>
+                                <td><a href="mail_detail.html">Amaze UI</a>
+                                </td>
+                                <td><a href="mail_detail.html">Amaze UI Beta2 发布</a>
+                                </td>
+                                <td class=""></td>
+                                <td class="text-right mail-date">上午10:57</td>
+                            </tr>
+                        </tbody>
+                </table>
+             </div>
+        </div>
+    
+</div>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom_js/news.js"></script>
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+</body>
+</html>

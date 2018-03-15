@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文章预览</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+        .clearfloat{zoom:1}
+        /*整体布局 Header Body Footer*/
+        body{
+            margin:0;
+            padding:0;
+            background: white url(img/background.png);
+            background-repeat:no-repeat ;
+        }
+        ul{
+            padding:0;
+            margin:0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color:#666666;
+        }
+        #Header{
+            width:100%;
+        }
+        #Body{
+            width:1235px;
+            margin:0 auto;
+            border:1px  solid #CDCDCD;
+            box-shadow:0 3px 10px 1px #CDCDCD;
+            background:#F3F3F4;
+        }
+        #Footer{
+            background: #dae1e9;
+            padding:20px;
+            margin-top:20px;
+        }
+        /*下拉菜单*/
+        .nav{
+            background:#27c2ee;
+        }
+        .nav nav{
+            width:1235px;
+            margin:0 auto;
+            position:relative;
+        }
+        .nav a{
+            color:white;
+            text-decoration: none;
+        }
+        .nav nav .ClassA{
+            display:inline-block;
+            position:relative;
+            float:left;
+            width:150px;
+            height:40px;
+        }
+        .nav nav .ClassA:hover{
+            background:#14A2CA;
+        }
+        .nav nav .ClassA:hover ul{
+            opacity:1;
+            left:0;
+        }
+        .nav nav .ClassA a{
+            display:inline-block;
+            width:100%;
+            height:100%;
+            text-align:center;
+            line-height:40px;
+            background:transparent;
+
+        }
+        .nav nav .ClassA ul{
+            /*隐藏二级菜单*/
+            width:150px;
+            height:40px;
+            position:absolute;
+            left:-20px;
+            z-index:3;
+            opacity:0;
+            transition: all  1s;
+        }
+        .nav nav .ClassA ul a{
+            background:#1CADD5;
+            padding:3px;
+            border-bottom:1px solid white;
+        }
+        .nav nav .ClassA ul a:hover{
+            background:#14A2CA;
+            padding:3px;
+            border-bottom:1px solid white;
+        }
+        .nav nav ul{
+            list-style:none;
+            padding:0;
+        }
+
+        /*中间文章预览内容*/
+
+        #Body .body-right{
+            width:95%;
+            float:left;
+            margin:10px 30px;
+            padding:30px;
+            border:1px solid #e2e3e3;
+        }
+        #Body .body-right #article{
+
+            border-bottom:1px solid #e2e3e3;
+        }
+    </style>
+</head>
+<body>
+<div id="Header">
+    <div class="clearfloat" style="width:1235px;margin:0 auto;">
+        <div  style="float:left;margin:30px;width:920px">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div  style="float:right;margin:30px">
+            <button><a href="login.html">登录</a></button>
+        </div>
+    </div>
+
+    <div class="nav clearfloat">
+        <nav>
+            <ul>
+                <li class="ClassA"><a href="user-index.html">首页</a></li>
+                <li class="ClassA"><a href="#">组织结构</a>
+                    <!--部门简介|离退休工作党委|关工委|党支部|离退休工作处|老教授协会|高教老协老体协|片区小组-->
+                    <ul>
+                        <li><a href="#">关工委</a></li>
+                        <li><a href="#">党支部</a></li>
+                        <li><a href="#">片区小组</a></li>
+                        <li><a href="#">老教授协会</a></li>
+                        <li><a href="#">离退休工作处</a></li>
+                        <li><a href="#">高教老协老体协</a></li>
+                        <li><a href="#">离退休工作党委</a></li>
+                        <li><a href="#">部门简介</a></li>
+                    </ul>
+                </li>
+
+                <li class="ClassA"><a href="#">政策文件</a>
+                    <!--国家政策|市级政策|学校政策|处内规定|重要讲话-->
+                    <ul>
+                        <li><a href="#">国家政策</a></li>
+                        <li><a href="#">市级政策</a></li>
+                        <li><a href="#">学校政策</a></li>
+                        <li><a href="#">处内规定</a></li>
+                        <li><a href="#">重要讲话</a></li></ul>
+
+                </li>
+
+                <li class="ClassA"><a href="#">党建工作</a>
+                    <!--专项工作|行政动态|协会工作|小组工作|人员信息-->
+                    <ul>
+                        <li><a href="#">专项工作</a></li>
+                        <li><a href="#">行政动态</a></li>
+                        <li><a href="#">协会工作</a></li>
+                        <li><a href="#">小组工作</a></li>
+                        <li><a href="#">人员信息</a></li></ul>
+
+                </li>
+
+                <li class="ClassA"><a href="#">行政管理</a>
+                    <!--专项工作|党建工作|关工委工作|教授协会工作|高教老协工作|老体协工作|党员园地|党员信息-->
+                    <ul>
+                        <li><a href="building.html">专项工作</a></li>
+                        <li><a href="#">党建工作</a></li>
+                        <li><a href="#">党员园地</a></li>
+                        <li><a href="#">党员信息</a></li>
+                        <li><a href="#">关工委工作</a></li>
+                        <li><a href="#">老体协工作</a></li>
+                        <li><a href="#">教授协会工作</a></li>
+                        <li><a href="#">高教老协工作</a></li></ul>
+                </li>
+
+                <li class="ClassA"><a href="#">特色服务</a>
+                    <!--特殊帮扶|法律咨询站点|心理咨询站点|志愿服务队-->
+                    <ul>
+                        <li><a href="#">特殊帮扶</a></li>
+                        <li><a href="#">志愿服务队</a></li>
+                        <li><a href="#">法律咨询站点</a></li>
+                        <li><a href="#">心理咨询站点</a></li>
+                    </ul>
+                </li>
+
+                <li class="ClassA"><a href="#">老年园地</a>
+                    <!--焕发风采|养生保健|作品展示-->
+                    <ul>
+                        <li><a href="#">焕发风采</a></li>
+                        <li><a href="#">养生保健</a></li>
+                        <li><a href="#">作品展示</a></li>
+                    </ul>
+                </li></ul>
+        </nav>
+    </div>
+</div>
+
+<div id="Body" class="clearfloat">
+
+    <div style="margin-bottom:20px"><img src="img/cqupt.jpg" alt="" style="width:100%"></div>
+
+    <div class="body-right">
+        <div style="margin-bottom:20px;border-bottom:2px solid #e2e3e3;">
+            <span style="font-size:30px;display: inline-block;">专项工作</span>
+            <span style="display: inline-block;margin-left:10em;">作者：***</span>
+            <span style="display: inline-block;margin-left:10em;">时间：2017-8-17</span>
+            <span style="display: inline-block;margin-left:10em;"><a href="">附件下载</a></span>
+        </div>
+        <div id="article">
+            <p></p><h3 style="text-align:center">阳春三月</h3><br>
+            <h5 style="text-align:center"><span style="font-weight: normal;">文字/香袭书卷</span></h5>
+            <br>
+            <br><p>二月如奔驰的马驹，一晃而过。三月带着一股兴盛的动态，强势入住。三月是有力量的，它不容忽视。</p><br>
+            <br><p>春天在三月里已经丰富饱满，那些生长出来的绿意，在一夜间，就多了许多。</p><br><br><p>“阳春百日风在香”，三月的微风带着俏皮吹拂在脸颊，温和的如少女的发丝，飘动着春天里特有的气息。走在三月的风中，有股特别渴望奔跑的想法。我们都经历过逆风飞翔的困难，我们也经过过迎风奔跑的快意。你在风中的样子，最美。</p><br>
+            <br><p>三月的雨是带着丝线的细，穿透心底的清幽，滋润着大地。小草，野花，树叶，绿枝，还有撑着雨伞的的人。在三月的雨中，是适合思念一个人的。“人间三月雨和尘”，三月的雨带着清凉缠绵，一来就会润了心田。一场雨后，更多春生。</p><br><br><p>三月的花，是迷人的。在花海里，抬头间，鼻尖就会触碰着花朵的温柔。颔首处，扑鼻而来的香氛，
+            流动在身边。忍不住的想去，与花共眠。写不尽的花意，流水也在等待着花的垂爱。花期到了，满树的花蕊，把春天装扮的格外美丽。</p><br>
+            <br><p>在三月里，遇到的人，也都是那么美好的。褪去了厚重的棉衣，每个人都是友好的。每一次相逢，都值得尊重。一定会有人，对你无条件的好，因为这些人懂得你的好。</p><br><br><p>更有知交，在你遇到困难的时候，如三月里的阳光，给予你无限的勇气和战胜困难的力量。不是每一段路程都布满鲜花，泥泞处，拉你一把的人，是尊贵的。明媚的三月，让一切都不是问题。</p><br>
+            <br><p>“时在中春，阳和方起。”到了三月，才真正的暖和起来，可以着单薄的春装。草木也正在翻动绿意，一眨眼，就看到了新芽。</p><br><br><p>三月，是个美丽的时节。草长莺飞时，值得去奋斗。</p><br><p></p><p><br></p>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="Footer">
+    <p style="text-align:center">重庆邮电大学离退休办事处  渝中区办事处</p>
+    <p style="text-align:center">&copy 香樟林工作室</p>
+</div>
+
+</body>
+</html>
